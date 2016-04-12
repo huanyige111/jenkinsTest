@@ -4,19 +4,6 @@
   <artifactId>jenkinsTest</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
-  <!-- SCM  远程代码库 -->
-  <scm>
-  	<url>https://github.com</url>
-  	<connection>scm:git:https://github.com/huanyige111/jenkinsTest.git</connection>
-  </scm>
-  <!-- 配置到文件系统 -->
-  <distributionManagement>
-  	<repository>
-  		<id>jenkinsTest</id>
-  		<name>jtest repository</name>
-  		<url>file:///root/apache-tomcat-9.0.0.M4/webapps/</url>
-  	</repository>
-  </distributionManagement>
   <build>
     <sourceDirectory>src</sourceDirectory>
     <plugins>
@@ -36,14 +23,6 @@
           <failOnMissingWebXml>false</failOnMissingWebXml>
         </configuration>
       </plugin>
-      <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-release-plugin</artifactId>
-            <version>2.5.3</version>
-            <configuration>
-            	<releaseProfiles>release</releaseProfiles>
-            </configuration>
-         </plugin>
     </plugins>
   </build>
 </project>
