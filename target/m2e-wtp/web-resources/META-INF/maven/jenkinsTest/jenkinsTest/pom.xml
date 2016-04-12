@@ -43,9 +43,6 @@
             <configuration>
                <useReleaseProfile>false</useReleaseProfile>
                <goals>deploy</goals>
-               <scmCommentPrefix>
-               	[bus-core-api-release-checkin]-
-               </scmCommentPrefix>
             </configuration>
          </plugin>
     </plugins>
