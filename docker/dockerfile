@@ -1,0 +1,11 @@
+FROM centos
+ARG TOMCAT_PATH=/opt/
+
+EXPOSE 8080
+
+RUN yum -y install wget \
+    && yum -y install java-1.8.0-openjdk \
+    && wget http://mirror.bit.edu.cn/apache/tomcat/tomcat-8/v8.5.16/bin/apache-tomcat-8.5.16.tar.gz \
+    && tar -zxvf apache-tomcat-8.5.16.tar.gz \
+    && mv apache-tomcat-8.5.16 /opt/tomcat8
+ENTRYPOINT ["/opt/tomcat8/bin/catalina.sh","run"]
